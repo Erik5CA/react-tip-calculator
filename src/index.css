@@ -1,0 +1,42 @@
+:root {
+  font-family: "Space Mono", monospace;
+  font-weight: 400;
+  font-style: normal;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+
+  --strong-cyan: hsl(172, 67%, 45%);
+  --very-dark-cyan: #00494d;
+  --dark-grayish-cyan: hsl(186, 14%, 43%);
+  --grayish-cyan: hsl(184, 14%, 56%);
+  --light-grayish-cyan: hsl(185, 41%, 84%);
+  --very-light-grayish-cyan: hsl(189, 41%, 97%);
+  --white: hsl(0, 0%, 100%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Space Mono", monospace;
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--light-grayish-cyan);
+}
+
+#root {
+  max-width: 1080px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+@media (width > 1020px) {
+  body {
+    align-items: center;
+  }
+}
