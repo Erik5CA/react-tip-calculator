@@ -35,6 +35,12 @@ body {
   margin: 0 auto;
 }
 
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
 @media (width > 1020px) {
   body {
     align-items: center;

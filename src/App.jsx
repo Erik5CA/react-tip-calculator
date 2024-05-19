@@ -1,32 +1,25 @@
-import { useState } from "react";
 import "./App.css";
-import { InputProvider } from "./components/TipContext";
 import { InputsContainer } from "./components/InputsContainer";
 import { ResultsContainer } from "./components/ResultsContainer";
-import { createContext } from "react";
-import { useContext } from "react";
+import { InputProvider } from "./contexts/TipProvider";
 
-const ResetContext = createContext(null)
-
-export function useResetContext(){
-  return useContext(ResetContext)
-}
-
+/**
+ * The main application component.
+ * It renders the title, InputProvider, and the container div.
+ * The container div contains InputsContainer and ResultsContainer components.
+ *
+ * @returns {JSX.Element} - The JSX element representing the App component.
+ */
 function App() {
-  const [selected, setSelected] = useState(false);
-
   return (
     <>
       <h1 className="title"> Splitter </h1>
       <InputProvider>
-      <div className="container">
-        <ResetContext.Provider value={{selected,setSelected}}>
-        <InputsContainer/>
-        <ResultsContainer/>
-        </ResetContext.Provider>
-      </div>
+        <div className="container">
+          <InputsContainer />
+          <ResultsContainer />
+        </div>
       </InputProvider>
-
     </>
   );
 }
